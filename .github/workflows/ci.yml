@@ -1,0 +1,40 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Vérifier HTML
+        run: |
+          test -f index.html
+          test -f inscription.html
+          test -f produits.html
+
+      - name: Vérifier CSS
+        run: |
+          test -f style.css
+
+      - name: Vérifier JS
+        run: |
+          test -f js.js
+
+      - name: Vérifier images
+        run: |
+          test -d images
+
+      - name: Build Docker
+        run: docker build -t maison-macaron-ci .

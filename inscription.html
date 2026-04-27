@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Inscription — Maison Macaron</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!--  Bande de bienvenue  -->
+<header class="bande">
+    <p>Bienvenue à Maison Macaron</p>
+</header>
+
+<!--Menu-->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="inscription.html">Inscription</a></li>
+      <li><a href="produits.html">Produits &amp; Commandes</a></li>
+    </ul>
+  </nav>
+
+<!--  Section Inscription -->
+  <section class="section-inscription">
+    <h1>Formulaire d'inscription</h1>
+    <p class="texte-intro-inscription">
+      Remplissez ce formulaire pour créer votre compte
+      <strong>Maison Macaron</strong>.
+    </p>
+     
+    <form id="form-inscription" action="#" method="post" onsubmit="return validerFormulaire()">
+
+<!-- Informations personnelles -->
+      <fieldset class="bloc-formulaire">
+        <legend>Informations personnelles</legend>
+
+        <label for="nom">Nom *</label>
+        <input type="text" id="nom" name="nom" />
+
+        <label for="prenom">Prénom *</label>
+        <input type="text" id="prenom" name="prenom" />
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="Ex : 22123456" />
+
+        <label for="naissance">Date de naissance</label>
+        <input type="date" id="naissance" name="naissance" />
+      </fieldset>
+
+ <!-- Informations de compte -->
+      <fieldset class="bloc-formulaire">
+        <legend>Compte Maison Macaron</legend>
+
+        <label for="pseudo">Nom d'utilisateur *</label>
+        <input type="text" id="pseudo" name="pseudo" />
+
+        <label for="motdepasse">Mot de passe *</label>
+        <input type="password" id="motdepasse" name="motdepasse" />
+
+        <label for="confirmation">Confirmation mot de passe *</label>
+        <input type="password" id="confirmation" name="confirmation" />
+      </fieldset>
+
+<!-- Préférences -->
+      <fieldset class="bloc-formulaire">
+        <legend>Préférences</legend>
+
+        <label for="pays">Pays</label>
+        <select id="pays" name="pays">
+          <option value="">-- Sélectionner --</option>
+          <option value="tunisie">Tunisie</option>
+          <option value="france">France</option>
+          <option value="italie">Italie</option>
+        </select>
+
+        <label for="ville">Ville</label>
+        <select id="ville" name="ville">
+          <option value="">-- Sélectionner --</option>
+          <option value="ariana">Ariana</option>
+          <option value="tunis">Tunis</option>
+          <option value="nabeul">Nabeul</option>
+        </select>
+
+        <p class="texte-mini">Genre :</p>
+        <label>
+          <input type="radio" name="genre" value="femme" />
+          Femme
+        </label>
+        <label>
+          <input type="radio" name="genre" value="homme" />
+          Homme
+        </label>
+      </fieldset>
+
+<!-- Conditions -->
+      <div class="conditions-generales">
+        <label>
+          <input type="checkbox" id="conditions" name="conditions" />
+          J'accepte les conditions générales de Maison Macaron *
+        </label>
+      </div>
+
+      <!-- Boutons -->
+      <div class="boutons-form">
+        <input type="submit" value="S'inscrire" />
+        <input type="reset" value="Réinitialiser" />
+      </div>
+
+    </form>
+  </section>
+
+  <!--  Pied de page  -->
+ <footer class="footer-page">
+  <p><strong>Maison Macaron</strong></p>
+
+  <p>
+     <a href="tel:24254112">24 254 112</a><br>
+     <a href="mailto:maisonmacaron@gmail.com">maisonmacaron@gmail.com</a><br>
+    <a href="https://instagram.com/maisonmacaron" target="_blank">@maisonmacaron</a>
+  </p>
+
+  <p class="copy">© 2025 Maison Macaron — Tous droits réservés</p>
+</footer>
+
+
+ 
+  <script src="js.js"></script>
+
+</body>
+</html>
